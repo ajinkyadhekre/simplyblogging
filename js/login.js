@@ -5,7 +5,7 @@ if(form != null){
     e.preventDefault();
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
-    console.log(data);
+    
     localStorage.setItem("userData", JSON.stringify(data));
     location.reload();
   });
@@ -18,7 +18,7 @@ console.log(userData);
 document.addEventListener("DOMContentLoaded", function(event) { 
   if(userData.username && userData.password){
     const user = document.getElementById("loginbtn");
-    console.log(user);
+    
     user.innerHTML = '<button type="button" class="btn btn-primary" id="logoutbtn" onclick="logout()">Logout</button>';
     document.getElementById("addBlogLink").classList.remove("disabled");
   }

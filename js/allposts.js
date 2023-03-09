@@ -16,7 +16,7 @@ function getBlogData(){
 }
 function showCard(blogData){
     const main = document.getElementById('allposts-container');        
-        console.log(blogData);
+        
           let output = ''
         // loop over the array      
           // set first row
@@ -24,8 +24,8 @@ function showCard(blogData){
             <div class="row">`     
             blogData.forEach(item => {  
              output += `   
-             <div class="col-md-4 col-lg-3 col-sm-6 g-4">        
-             <div class="card h-100 shadow mt-2">
+             <div class="col-md-4 col-lg-3 col-sm-6 g-4 h-25">        
+             <div class="card h-100 shadow mt-2 mb-2">
              
               <img src=${item.image} class="card-img-top col-sm flex-row" alt="...">
               <div class="card-body col-sm">
