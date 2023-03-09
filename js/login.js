@@ -29,3 +29,16 @@ function logout(){
   localStorage.removeItem("userData");
   window.location.replace("index.html");
 }
+
+function clearStorage() {
+
+  let session = sessionStorage.getItem('register');
+
+  if (session == null) {
+  
+      localStorage.removeItem('remove');
+
+  }
+  sessionStorage.setItem('register', 1);
+}
+window.addEventListener('load', clearStorage);
